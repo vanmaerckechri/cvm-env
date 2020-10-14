@@ -8,7 +8,7 @@ class PasswordResetMail extends AbstractMail
 {
 	protected static function getHeader(): string
 	{
-		$header = "From: \"CVM-ENV\"<robot@cvm.com>\n";
+		$header = "From: CVM-ENV <robot@cvm.com>\n";
 		$header .= "Content-Type: text/html; charset=\"UTF-8\"\n";
 		$header .= "Content-Transfer-Encoding: 8bit";
 
