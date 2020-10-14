@@ -8,7 +8,7 @@ use Core\{
 	Facade\Query
 };
 use src\{
-	mail\PasswordResetMail,
+	Mail\PasswordResetMail,
 	Schema\UserSchema
 };
 
