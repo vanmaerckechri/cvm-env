@@ -1,0 +1,58 @@
+.formContainer
+{
+	padding-bottom: $distance-generic02;
+	width: 100%;
+	h3
+	{
+		margin-bottom: $distance-generic01 * 2;
+	}
+	a
+	{
+		margin-top: ($distance-generic01 * 2);
+	}
+	form
+	{
+		margin: 0 auto;
+		max-width: $form-maxWidth;
+		width: 100%;
+	}
+	label, input
+	{
+		display: inline-block;
+		width: 100%;
+	}
+	label
+	{
+		margin-bottom: $distance-generic01;
+	}
+	input[type="text"], input[type="email"], input[type="password"]
+	{
+		margin-bottom: $distance-generic01;
+		border-left: 4px solid transparent;
+		padding: $distance-generic01;
+		&:invalid
+		{
+			box-shadow: none;
+		}
+	}
+	input::-ms-clear, input::-ms-reveal 
+	{
+		display: none;
+	}
+	input[type="submit"]
+	{
+		margin-bottom: $distance-generic01;
+	}
+	input.fieldStatusError
+	{
+		border-color: $bgColor-smsError;
+	}
+	input.fieldStatusSuccess
+	{
+		border-color: $bgColor-smsSuccess;
+	}
+	.row
+	{
+		margin-bottom: ($distance-generic01 * 2);
+	}
+}

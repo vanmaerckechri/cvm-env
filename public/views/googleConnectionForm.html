@@ -1,0 +1,13 @@
+<form id="registrationGoogleForm" class="registrationGoogleForm disable" method="post">
+	<div class="row">
+		<label for="username">
+			{{en}}Choose a username *{{/en}}
+			{{fr}}Choisissez un nom d'utilisateur *{{/fr}}
+		</label>
+		<input type="text" name="username" id="username">
+		<div id="usernameAlreadyUseMessage" class="messageBox error disable"></div>
+		<ul id="usernameConditionMessage" class="messageBox disable"></ul>
+	</div>
+	<input id="registerGoogleBtn" class="btn" type="submit" value="{{en}}VALIDATE{{/en}}{{fr}}VALIDER{{/fr}}">
+	<div id="messageForm" class="messageBox disable"></div>
+</form>

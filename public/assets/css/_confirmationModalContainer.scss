@@ -1,0 +1,43 @@
+.confirmationModalContainer
+{
+	.infos
+	{
+		margin-bottom: $distance-generic02;
+	}
+	.btnContainer
+	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.btn
+		{
+			margin: 0 $distance-generic03;
+			border: 2px solid $bgColor-header;
+			min-width: 150px;
+		}
+		.confirmBtn
+		{
+			background-color: $bgColor-smsError;			
+		}
+		.cancelBtn
+		{
+			background-color: $bgColor-smsSuccess;			
+		}
+	}
+}
+
+@media screen and (max-width: 550px)
+{
+	.confirmationModalContainer
+	{
+		.btnContainer
+		{
+			justify-content: center;
+			.btn
+			{
+				margin: $distance-generic01 0;
+				width: 100%;
+			}
+		}
+	}	
+}

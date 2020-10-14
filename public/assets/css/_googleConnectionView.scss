@@ -1,0 +1,30 @@
+@keyframes registrationGoogleForm
+{
+	0%
+	{
+		max-height: 0;
+	}
+	100%
+	{
+		max-height: 500px;
+	}
+}
+.googleConnectionView
+{
+	.formContainer
+	{
+		margin: 0 auto;
+	}
+	.maxWidth-container
+	{
+		max-width: $form-maxWidth;
+	}
+	.registrationGoogleForm
+	{
+		overflow: hidden;
+		animation-name: registrationGoogleForm;
+		animation-duration: 0.5s;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+}

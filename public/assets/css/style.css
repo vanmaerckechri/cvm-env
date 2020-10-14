@@ -1,0 +1,670 @@
+html, body, header, nav, footer, section, div, span, h1, h2, h3, h4, h5, h6, p, a, blockquote, cite, img, ol, ul, li, form, fieldset, legend, label, input, textarea, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+ul {
+  list-style: none; }
+
+a {
+  display: inline-block;
+  color: #340068; }
+
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  height: 100%; }
+
+html {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 100%; }
+
+body {
+  color: white;
+  background-color: black; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat, Helvetica, Arial, sans-Serif;
+  font-weight: lighter; }
+
+h2 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center; }
+
+.maxWidth-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  max-width: 1024px;
+  width: 100%; }
+
+.btn {
+  border-radius: 8px;
+  padding: 12px 0.5rem;
+  font-family: Montserrat, Helvetica, Arial, sans-Serif;
+  font-size: 90%;
+  color: #dbdde1;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  background-color: #4d4366; }
+  .btn:hover {
+    cursor: pointer; }
+
+.small {
+  font-size: 0.7rem; }
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  height: 100%; }
+
+.messageBox {
+  overflow: hidden;
+  padding: 0.5rem;
+  max-height: 250px;
+  font-size: 90%;
+  color: black;
+  background-color: #e3e6ec;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  .messageBox li {
+    margin-bottom: 0.5rem; }
+  .messageBox li:last-of-type {
+    margin-bottom: 0; }
+  .messageBox.disable {
+    padding: 0 0.5rem;
+    max-height: 0;
+    opacity: 0;
+    -webkit-transform: scale3d(1, 0, 1);
+            transform: scale3d(1, 0, 1); }
+  .messageBox .message {
+    padding-left: 0.8rem;
+    position: relative; }
+    .messageBox .message::before {
+      content: "";
+      position: absolute;
+      top: 0.3rem;
+      left: 0;
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: #d21d1d;
+      -webkit-transition: -webkit-transform 0.3s;
+      transition: -webkit-transform 0.3s;
+      transition: transform 0.3s;
+      transition: transform 0.3s, -webkit-transform 0.3s; }
+  .messageBox .message.validation {
+    text-decoration: line-through; }
+    .messageBox .message.validation::before {
+      -webkit-transform: scale3d(0, 0, 1);
+              transform: scale3d(0, 0, 1); }
+
+.messageBox.success, .messageBox.error {
+  color: white; }
+
+.messageBox.success {
+  background-color: #1c8200; }
+
+.messageBox.error {
+  background-color: #d21d1d; }
+
+.explanations {
+  margin: 0.5rem 0 1.5rem;
+  padding: 0.5rem;
+  font-size: 90%;
+  line-height: 1.5rem;
+  color: black;
+  background-color: #e3e6ec;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+
+.modalContainer {
+  z-index: 12;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2a3036; }
+  .modalContainer .container {
+    width: 100%;
+    background-color: #d21d1d; }
+  .modalContainer .messageBox {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    font-size: 100%; }
+
+.spamModalContainer .spam_timer {
+  font-weight: bold; }
+
+.confirmationModalContainer .infos {
+  margin-bottom: 1.5rem; }
+.confirmationModalContainer .btnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .confirmationModalContainer .btnContainer .btn {
+    margin: 0 2.5rem;
+    border: 2px solid #2a3036;
+    min-width: 150px; }
+  .confirmationModalContainer .btnContainer .confirmBtn {
+    background-color: #d21d1d; }
+  .confirmationModalContainer .btnContainer .cancelBtn {
+    background-color: #1c8200; }
+
+@media screen and (max-width: 550px) {
+  .confirmationModalContainer .btnContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .confirmationModalContainer .btnContainer .btn {
+      margin: 0.5rem 0;
+      width: 100%; } }
+.formContainer {
+  padding-bottom: 1.5rem;
+  width: 100%; }
+  .formContainer h3 {
+    margin-bottom: 1rem; }
+  .formContainer a {
+    margin-top: 1rem; }
+  .formContainer form {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%; }
+  .formContainer label, .formContainer input {
+    display: inline-block;
+    width: 100%; }
+  .formContainer label {
+    margin-bottom: 0.5rem; }
+  .formContainer input[type="text"], .formContainer input[type="email"], .formContainer input[type="password"] {
+    margin-bottom: 0.5rem;
+    border-left: 4px solid transparent;
+    padding: 0.5rem; }
+    .formContainer input[type="text"]:invalid, .formContainer input[type="email"]:invalid, .formContainer input[type="password"]:invalid {
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+  .formContainer input::-ms-clear, .formContainer input::-ms-reveal {
+    display: none; }
+  .formContainer input[type="submit"] {
+    margin-bottom: 0.5rem; }
+  .formContainer input.fieldStatusError {
+    border-color: #d21d1d; }
+  .formContainer input.fieldStatusSuccess {
+    border-color: #1c8200; }
+  .formContainer .row {
+    margin-bottom: 1rem; }
+
+header {
+  position: relative;
+  z-index: 11;
+  background-color: #2a3036; }
+  header .mainMenuContainer {
+    position: relative; }
+    header .mainMenuContainer .title {
+      padding: 0.5rem 0; }
+    header .mainMenuContainer .mainMenu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+      header .mainMenuContainer .mainMenu li .navBtn {
+        padding: 0.5rem;
+        text-decoration: none;
+        color: white;
+        vertical-align: bottom; }
+        header .mainMenuContainer .mainMenu li .navBtn:hover {
+          cursor: pointer;
+          color: black;
+          background-color: white; }
+    header .mainMenuContainer .myAccountUsername {
+      overflow: hidden;
+      max-width: 100px;
+      width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    header .mainMenuContainer .subMenuContainer {
+      margin-left: 1.5rem; }
+      header .mainMenuContainer .subMenuContainer .subMenu {
+        position: absolute;
+        right: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        min-width: 110px;
+        text-align: right;
+        background-color: #2a3036;
+        -webkit-transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+        transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); }
+        header .mainMenuContainer .subMenuContainer .subMenu li .navBtn {
+          width: 100%; }
+      header .mainMenuContainer .subMenuContainer:hover .subMenu {
+        max-height: 500px;
+        -webkit-transition: max-height 1s ease-in-out;
+        transition: max-height 1s ease-in-out; }
+      header .mainMenuContainer .subMenuContainer:hover .subMenuTitle {
+        background-color: white;
+        color: black; }
+    header .mainMenuContainer input, header .mainMenuContainer .mainMenu-btn {
+      position: absolute;
+      top: 4px;
+      right: 0;
+      width: 0;
+      height: 0;
+      pointer-events: none; }
+    header .mainMenuContainer input {
+      z-index: 1;
+      opacity: 0; }
+
+@media screen and (max-width: 590px) {
+  header .mainMenuContainer .mainMenu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); }
+    header .mainMenuContainer .mainMenu li {
+      width: 100%;
+      text-align: center; }
+      header .mainMenuContainer .mainMenu li .navBtn {
+        width: 100%; }
+  header .mainMenuContainer .subMenuContainer {
+    margin-left: 0; }
+    header .mainMenuContainer .subMenuContainer .subMenu {
+      position: relative;
+      text-align: center; }
+    header .mainMenuContainer .subMenuContainer:hover {
+      border: 1px solid white;
+      border-top: none; }
+  header .mainMenuContainer .myAccountUsername {
+    max-width: 100%; }
+  header .mainMenuContainer .mainMenu-btn, header .mainMenuContainer input {
+    height: 38px;
+    width: 38px; }
+  header .mainMenuContainer .mainMenu-btn span {
+    margin-left: auto;
+    width: 38px;
+    height: 2px;
+    display: block;
+    background-color: white;
+    pointer-events: none;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s; }
+    header .mainMenuContainer .mainMenu-btn span:nth-of-type(1) {
+      -webkit-transform-origin: left top;
+              transform-origin: left top;
+      -webkit-transform: translate3d(0, 4px, 0);
+              transform: translate3d(0, 4px, 0); }
+    header .mainMenuContainer .mainMenu-btn span:nth-of-type(2) {
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-transform: translate3d(0, 16px, 0);
+              transform: translate3d(0, 16px, 0);
+      -webkit-transition: opacity 0.2s 0.1s, -webkit-transform 0.3s;
+      transition: opacity 0.2s 0.1s, -webkit-transform 0.3s;
+      transition: opacity 0.2s 0.1s, transform 0.3s;
+      transition: opacity 0.2s 0.1s, transform 0.3s, -webkit-transform 0.3s; }
+    header .mainMenuContainer .mainMenu-btn span:nth-of-type(3) {
+      -webkit-transform-origin: left bottom;
+              transform-origin: left bottom;
+      -webkit-transform: translate3d(0, 28px, 0);
+              transform: translate3d(0, 28px, 0); }
+  header .mainMenuContainer input {
+    pointer-events: auto; }
+    header .mainMenuContainer input:hover {
+      cursor: pointer; }
+  header .mainMenuContainer input:checked ~ ul {
+    max-height: 500px;
+    -webkit-transition: max-height 1s ease-in-out;
+    transition: max-height 1s ease-in-out; }
+  header .mainMenuContainer input:checked ~ .mainMenu-btn span:nth-of-type(1) {
+    -webkit-transform: translate3d(6px, 5px, 0) rotate(45deg);
+            transform: translate3d(6px, 5px, 0) rotate(45deg); }
+  header .mainMenuContainer input:checked ~ .mainMenu-btn span:nth-of-type(2) {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 16px, 0) scale3d(0, 1, 1);
+            transform: translate3d(0, 16px, 0) scale3d(0, 1, 1); }
+  header .mainMenuContainer input:checked ~ .mainMenu-btn span:nth-of-type(3) {
+    -webkit-transform: translate3d(6px, 27px, 0) rotate(-45deg);
+            transform: translate3d(6px, 27px, 0) rotate(-45deg); } }
+footer {
+  position: relative;
+  z-index: 11;
+  background-color: #2a3036; }
+  footer h2 {
+    padding: 0.5rem;
+    text-align: left; }
+
+@-webkit-keyframes play_passwordVisibility {
+  0% {
+    background-position: 0px; }
+  100% {
+    background-position: -96px; } }
+
+@keyframes play_passwordVisibility {
+  0% {
+    background-position: 0px; }
+  100% {
+    background-position: -96px; } }
+@-webkit-keyframes play_passwordVisibilityReverse {
+  0% {
+    background-position: -96px; }
+  100% {
+    background-position: 0px; } }
+@keyframes play_passwordVisibilityReverse {
+  0% {
+    background-position: -96px; }
+  100% {
+    background-position: 0px; } }
+.formContainer .passwordContainer {
+  position: relative; }
+  .formContainer .passwordContainer input {
+    padding-right: 36px; }
+  .formContainer .passwordContainer .passwordVisibility {
+    position: absolute;
+    right: 6px;
+    top: calc(50% - (0.5rem / 2));
+    width: 24px;
+    height: 24px;
+    background: url("../images/passwordVisibility.svg") no-repeat;
+    background-size: 120px 24px;
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0); }
+    .formContainer .passwordContainer .passwordVisibility:hover {
+      cursor: pointer; }
+  .formContainer .passwordContainer .pwd {
+    -webkit-animation: play_passwordVisibilityReverse 0.2s steps(4) backwards;
+            animation: play_passwordVisibilityReverse 0.2s steps(4) backwards; }
+  .formContainer .passwordContainer .text {
+    -webkit-animation: play_passwordVisibility 0.2s steps(4) forwards;
+            animation: play_passwordVisibility 0.2s steps(4) forwards; }
+
+@-webkit-keyframes comeFromTop {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+@keyframes comeFromTop {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+@-webkit-keyframes comeFromRight {
+  0% {
+    -webkit-transform: translate3d(100, 0, 0);
+            transform: translate3d(100, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+@keyframes comeFromRight {
+  0% {
+    -webkit-transform: translate3d(100, 0, 0);
+            transform: translate3d(100, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+@-webkit-keyframes unhide {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes unhide {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.views {
+  position: relative;
+  width: 100vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+  .views .view {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #78A1BB; }
+    .views .view.animate {
+      z-index: 10;
+      pointer-events: none; }
+
+.views .initUnhide {
+  opacity: 0; }
+  .views .initUnhide > div {
+    opacity: inherit; }
+.views .unhide {
+  -webkit-animation-name: unhide;
+          animation-name: unhide;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+.views .initComeFromTop {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0); }
+.views .comeFromTop {
+  -webkit-animation-name: comeFromTop;
+          animation-name: comeFromTop;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+.views .initComeFromRight {
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0); }
+.views .comeFromRight {
+  -webkit-animation-name: comeFromRight;
+          animation-name: comeFromRight;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+.views .viewToRemove {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.accountActivationView .container {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%; }
+  .accountActivationView .container a {
+    margin-top: 1rem; }
+
+@-webkit-keyframes registrationGoogleForm {
+  0% {
+    max-height: 0; }
+  100% {
+    max-height: 500px; } }
+
+@keyframes registrationGoogleForm {
+  0% {
+    max-height: 0; }
+  100% {
+    max-height: 500px; } }
+.googleConnectionView .formContainer {
+  margin: 0 auto; }
+.googleConnectionView .maxWidth-container {
+  max-width: 500px; }
+.googleConnectionView .registrationGoogleForm {
+  overflow: hidden;
+  -webkit-animation-name: registrationGoogleForm;
+          animation-name: registrationGoogleForm;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+.loginView .linkContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+.loginView .googleContainer {
+  margin: 2.5rem auto 0;
+  border-top: 1px solid #2a3036;
+  position: relative;
+  max-width: 500px;
+  width: 100%; }
+  .loginView .googleContainer::before {
+    border: 1px solid #2a3036;
+    border-radius: 50%;
+    padding: 0.5rem;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: attr(data-or);
+    display: inline-block;
+    color: #2a3036;
+    background-color: #78A1BB;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0); }
+.loginView .googleBtn {
+  margin-top: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none; }
+  .loginView .googleBtn .text {
+    padding: 12px 10px 12px 26px;
+    position: relative;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center; }
+    .loginView .googleBtn .text::before {
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 42px;
+      background-color: #78A1BB;
+      -webkit-transform: translate3d(-50%, -50%, 0);
+              transform: translate3d(-50%, -50%, 0); }
+  .loginView .googleBtn .social-icon {
+    position: relative;
+    z-index: 1;
+    min-width: 36px;
+    min-height: 36px;
+    max-width: 36px;
+    max-height: 36px; }
+  .loginView .googleBtn .circle-googlePlus {
+    border: 2px solid #dbdde1;
+    border-radius: 50%;
+    background: url("../images/social.svg") -96px -96px/400%; }
+
+@media screen and (max-width: 396px) {
+  .loginView .googleBtn .text {
+    padding: 12px 14px 12px 36px; }
+    .loginView .googleBtn .text::before {
+      width: 38px;
+      height: 60px; }
+  .loginView .googleBtn .social-icon {
+    min-width: 52px;
+    min-height: 52px;
+    max-width: 52px;
+    max-height: 52px; }
+  .loginView .googleBtn .circle-googlePlus {
+    background: url("../images/social.svg") -144px -144px/400%; } }
+.myAccountView .container {
+  margin-bottom: 1.5rem;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #a4a4a43b; }
+  .myAccountView .container .category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #2a3036;
+    white-space: nowrap;
+    font-size: 100%; }
+    .myAccountView .container .category::after {
+      content: '';
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
+      background-color: #2a3036; }
+    .myAccountView .container .category::before {
+      margin-right: 0.5rem;
+      content: '';
+      height: 2px;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      background-color: #2a3036; }
+  .myAccountView .container .btn {
+    border: 1px solid #dbdde1; }
+
+.page404View {
+  text-align: center; }
+/*# sourceMappingURL=style.css.map */

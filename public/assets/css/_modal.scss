@@ -1,0 +1,21 @@
+.modalContainer
+{
+	z-index: 12;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	background-color: $grey02;
+	.container
+	{
+		width: 100%;
+		background-color: $bgColor-smsError;
+	}
+	.messageBox
+	{
+		padding: $distance-generic03 $distance-generic02;
+		text-align: center;
+		font-size: 100%;
+	}
+}

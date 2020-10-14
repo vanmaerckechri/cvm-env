@@ -1,0 +1,13 @@
+.accountActivationView
+{
+	.container
+	{
+		margin: 0 auto;
+		max-width: $form-maxWidth;
+		width: 100%;
+		a
+		{
+			margin-top: $distance-generic01 * 2;
+		}
+	}
+}

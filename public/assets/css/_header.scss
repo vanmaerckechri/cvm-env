@@ -1,0 +1,211 @@
+header
+{
+	position: relative;
+	z-index: 11;
+	background-color: $bgColor-header;
+	.mainMenuContainer
+	{
+		position: relative;
+		.title
+		{
+			padding: $distance-generic01 0;
+		}
+		.mainMenu
+		{
+			display: flex;
+			justify-content: flex-end;
+			// Buttons being common to the menu and submenus.
+			li
+			{
+				.navBtn
+				{
+					padding: $distance-generic01;
+					text-decoration: none;
+					color: white;
+					vertical-align: bottom;
+					&:hover
+					{
+						cursor: pointer;
+						color: black;
+						background-color: white;
+					}
+				}
+			}
+		}
+		.myAccountUsername
+		{
+			overflow: hidden;
+			max-width: 100px;
+			width: 100%;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.subMenuContainer
+		{
+			margin-left: $distance-generic02;
+			.subMenu
+			{
+				position: absolute;
+				right: 0;
+				display: flex;
+				flex-direction: column;
+				overflow: hidden;
+				max-height: 0;
+				min-width: 110px;
+				text-align: right;
+				background-color: $bgColor-header;
+				transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+				li
+				{
+					.navBtn
+					{
+						width: 100%;
+					}
+				}
+			}
+			&:hover
+			{
+				.subMenu
+				{
+					max-height: 500px;
+					transition: max-height 1s ease-in-out;
+				}
+				.subMenuTitle
+				{
+					background-color: white;
+					color: black;
+				}
+			}
+		}
+		// burger-btn
+		input, .mainMenu-btn
+		{
+			position: absolute;
+			top: 4px;
+			right: 0;
+			width: 0;
+			height: 0;
+			pointer-events: none;
+		}
+		input
+		{
+			z-index: 1;
+			opacity: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 590px)
+{
+	header
+	{
+		.mainMenuContainer
+		{
+			.mainMenu
+			{
+				flex-direction: column;
+				align-items: center;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+				li
+				{
+					width: 100%;
+					text-align: center;
+					.navBtn
+					{
+						width: 100%;
+					}
+				}
+			}
+			.subMenuContainer
+			{
+				margin-left: 0;
+				.subMenu
+				{
+					position: relative;
+					text-align: center;
+				}
+				&:hover
+				{
+					border: 1px solid white;
+					border-top: none;
+				}
+			}
+			.myAccountUsername
+			{
+				max-width: 100%;
+			}
+		}
+		// burger-btn
+		.mainMenuContainer
+		{
+			.mainMenu-btn, input
+			{
+				height: 38px;
+				width: 38px;				
+			}
+			.mainMenu-btn
+			{
+				span
+				{
+					margin-left: auto;
+					width: 38px;
+					height: 2px;
+					display: block;
+					background-color: white;
+					pointer-events: none;
+					transition: transform 0.5s;
+					&:nth-of-type(1)
+					{
+						transform-origin: left top;
+						transform: translate3d(0, 4px, 0);
+					}
+					&:nth-of-type(2)
+					{
+						transform-origin: center center;
+						transform: translate3d(0, 16px, 0);
+						transition: opacity 0.2s 0.1s, transform 0.3s;
+					}
+					&:nth-of-type(3)
+					{
+						transform-origin: left bottom;
+						transform: translate3d(0, 28px, 0);
+					}
+				}
+			}
+			input
+			{
+				pointer-events: auto;
+				&:hover
+				{
+					cursor: pointer;
+				}
+			}
+			input:checked ~ ul
+			{
+				max-height: 500px;
+				transition: max-height 1s ease-in-out;
+			}
+			input:checked ~ .mainMenu-btn
+			{
+				span
+				{
+					&:nth-of-type(1)
+					{
+						transform: translate3d(6px, 5px, 0) rotate(45deg);
+					}
+					&:nth-of-type(2)
+					{
+						opacity: 0;
+						transform: translate3d(0, 16px, 0) scale3d(0, 1, 1);
+					}			
+					&:nth-of-type(3)
+					{
+						transform: translate3d(6px, 27px, 0) rotate(-45deg);
+					}
+				}
+			}
+		}
+	}
+}

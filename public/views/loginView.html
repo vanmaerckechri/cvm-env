@@ -1,0 +1,36 @@
+<div class="view loginView">
+	<div class="maxWidth-container formContainer">
+		<h2>{{en}}Connection{{/en}}{{fr}}Connexion{{/fr}}</h2>
+		<form id="loginForm" method="post">
+			<div class="row">
+				<label for="username">
+					{{en}}Username / Email *{{/en}}
+					{{fr}}Nom d'Utilisateur / Email *{{/fr}}
+				</label>
+				<input type="text" name="username" id="username">
+			</div>
+			<div class="row">
+				<label for="password">
+					{{en}}Password *{{/en}}
+					{{fr}}Mot de Passe *{{/fr}}
+				</label>
+				<div class="passwordContainer">
+					<input type="password" name="password" id="password">
+					<div id="passwordVisibility" class="passwordVisibility"></div>
+				</div>
+			</div>
+			<input id="loginBtn" class="btn" type="submit" value="{{en}}CONNECTION{{/en}}{{fr}}CONNEXION{{/fr}}">
+			<div id="messageForm" class="messageBox disable"></div>
+			<div class="linkContainer">
+				<a href="" data-href="registration">{{en}}Registration{{/en}}{{fr}}Inscription{{/fr}}</a>
+				<a href="" data-href="passwordResetMailForm">{{en}}Forgot password?{{/en}}{{fr}}Mot de passe oublié?{{/fr}}</a>
+			</div>
+		</form>
+		<div class="googleContainer" data-or="{{en}}OR{{/en}}{{fr}}OU{{/fr}}">
+			<a id="googleBtn" class="googleBtn" href="">
+				<div class="social-icon circle-googlePlus"></div>
+				<div class="btn text">{{en}}CONNECT WITH GOOGLE{{/en}}{{fr}}SE CONNECTER AVEC GOOGLE{{/fr}}</div>
+			</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,63 @@
+<div class="view registrationView">
+	<div class="maxWidth-container formContainer">
+		<h2>{{en}}Registration{{/en}}{{fr}}Inscription{{/fr}}</h2>
+		<form id="registrationForm" method="post">
+			<div class="row">
+				<label for="username">
+					{{en}}Username *{{/en}}
+					{{fr}}Nom d'Utilisateur *{{/fr}}
+				</label>
+				<input type="text" name="username" id="username">
+				<div id="usernameAlreadyUseMessage" class="messageBox error disable"></div>
+				<ul id="usernameConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<div class="row">
+				<label for="firstname">
+					{{en}}Firstname{{/en}}
+					{{fr}}Prénom{{/fr}}
+				</label>
+				<input type="text" name="firstname" id="firstname">
+				<ul id="firstnameConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<div class="row">
+				<label for="lastname">
+					{{en}}Lastname{{/en}}
+					{{fr}}Nom de Famille{{/fr}}
+				</label>
+				<input type="text" name="lastname" id="lastname">
+				<ul id="lastnameConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<div class="row">
+				<label for="email">
+					{{en}}Email Address *{{/en}}
+					{{fr}}Adresse Email *{{/fr}}
+				</label>
+				<input type="email" name="email" id="email">
+				<div id="emailAlreadyUseMessage" class="messageBox error disable"></div>
+				<ul id="emailConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<div class="row">
+				<label for="password">
+					{{en}}Password *{{/en}}
+					{{fr}}Mot de Passe *{{/fr}}
+				</label>
+				<div class="passwordContainer">
+					<input type="password" name="password" id="password">
+					<div id="passwordVisibility" class="passwordVisibility"></div>
+				</div>
+				<ul id="passwordConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<div class="row">
+				<label for="passwordConfirm">
+					{{en}}Confirm Password *{{/en}}
+					{{fr}}Confirmer le Mot de Passe *{{/fr}}
+				</label>
+				<input type="password" name="passwordConfirm" id="passwordConfirm">
+				<ul id="passwordConfirmConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<input id="registerBtn" class="btn" type="submit" value="{{en}}VALIDATE{{/en}}{{fr}}VALIDER{{/fr}}">
+			<div id="messageForm" class="messageBox disable"></div>
+			<a href="" data-href="login">{{en}}Connection{{/en}}{{fr}}Connexion{{/fr}}</a>
+		</form>
+	</div>
+</div>

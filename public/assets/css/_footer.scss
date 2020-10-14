@@ -1,0 +1,11 @@
+footer
+{
+	position: relative;
+	z-index: 11;
+	background-color: $bgColor-footer;
+	h2
+	{
+		padding: $distance-generic01;
+		text-align: left;
+	}
+}

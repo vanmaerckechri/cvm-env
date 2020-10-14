@@ -1,0 +1,73 @@
+.messageBox
+{
+	overflow: hidden;
+	padding: $distance-generic01;
+	max-height: 250px;
+	font-size: 90%;
+	color: black;
+	background-color: $bcColor-formInfo;
+	transform-origin: top center;
+	transition: all 0.2s;
+	li
+	{
+		margin-bottom: $distance-generic01;
+	}
+	li:last-of-type
+	{
+		margin-bottom: 0;
+	}
+	&.disable
+	{
+		padding: 0 $distance-generic01;
+		max-height: 0;
+		opacity: 0;
+		transform: scale3d(1, 0, 1);
+	}
+	.message
+	{
+		padding-left: 0.8rem;
+		position: relative;
+		&::before
+		{
+			content: "";
+			position: absolute;
+			top: 0.3rem;
+			left: 0;
+			width: 0.5rem;
+			height: 0.5rem;
+			background-color: $bgColor-smsError;
+			transition: transform 0.3s
+		}
+	}
+	.message.validation
+	{
+		text-decoration: line-through;
+		&::before
+		{
+			transform: scale3d(0, 0, 1);
+		}
+	}
+}
+.messageBox.success, .messageBox.error
+{
+	color: white;
+}
+.messageBox.success
+{
+	background-color: $bgColor-smsSuccess;
+}
+.messageBox.error
+{
+	background-color: $bgColor-smsError;
+}
+.explanations
+{
+	margin: $distance-generic01 0 $distance-generic02;
+	padding: $distance-generic01;
+	font-size: 90%;
+	line-height: 1.5rem;
+	color: black;
+	background-color: $bcColor-formInfo;
+	transform-origin: top center;
+	transition: all 0.2s;	
+}

@@ -1,0 +1,113 @@
+<div class="view myAccountView">
+	<div class="maxWidth-container formContainer">
+		<h2>{{en}}My Account{{/en}}{{fr}}Mon Compte{{/fr}}</h2>
+		<form id="profilForm" class="container" method="post">
+			<h3 class="category">{{en}}Personal Informations{{/en}}{{fr}}Informations Personnelles{{/fr}}</h3>
+			<div class="row">
+				<label for="firstname">
+					{{en}}Firstname{{/en}}
+					{{fr}}Prénom{{/fr}}
+				</label>
+				<input type="text" name="firstname" id="firstname">
+				<ul id="firstnameConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<div class="row">
+				<label for="lastname">
+					{{en}}Lastname{{/en}}
+					{{fr}}Nom de Famille{{/fr}}
+				</label>
+				<input type="text" name="lastname" id="lastname">
+				<ul id="lastnameConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<div class="row">
+				<label for="passwordForProfil">
+					{{en}}Password *{{/en}}
+					{{fr}}Mot de Passe *{{/fr}}
+				</label>
+				<div class="passwordContainer">
+					<input type="password" data-type="password" name="passwordForProfil" id="passwordForProfil">
+					<div id="passwordForProfilVisibility" class="passwordVisibility"></div>
+				</div>
+				<ul id="passwordForProfilConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<input id="profilBtn" class="btn" type="submit" value="{{en}}VALIDATE{{/en}}{{fr}}VALIDER{{/fr}}">
+			<div id="messageForm" class="messageBox disable"></div>
+		</form>
+		<form id="changeEmailForm" class="container" method="post">
+			<h3 class="category">{{en}}Change Email{{/en}}{{fr}}Modifier l'Adresse Email{{/fr}}</h3>
+			<div class="row">
+				<label for="email">
+					{{en}}Email Address*{{/en}}
+					{{fr}}Adresse Email *{{/fr}}
+				</label>
+				<input type="email" name="email" id="email">
+				<div id="emailAlreadyUseMessage" class="messageBox error disable"></div>
+				<ul id="emailConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<div class="row">
+				<label for="passwordToChangeEmail">
+					{{en}}Password *{{/en}}
+					{{fr}}Mot de Passe *{{/fr}}
+				</label>
+				<div class="passwordContainer">
+					<input type="password" data-type="password" name="passwordToChangeEmail" id="passwordToChangeEmail">
+					<div id="passwordToChangeEmailVisibility" class="passwordVisibility"></div>
+				</div>
+				<ul id="passwordToChangeEmailConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<input id="changeEmailBtn" class="btn" type="submit" value="{{en}}VALIDATE{{/en}}{{fr}}VALIDER{{/fr}}">
+			<div id="messageForm" class="messageBox disable"></div>
+		</form>
+		<form id="changePasswordForm" class="container" method="post">
+			<h3 class="category">{{en}}Change Password{{/en}}{{fr}}Modifier le Mot de Passe{{/fr}}</h3>
+			<div class="row">
+				<label for="password">
+					{{en}}New Password *{{/en}}
+					{{fr}}Nouveau Mot de Passe *{{/fr}}
+				</label>
+				<div class="passwordContainer">
+					<input type="password" data-type="password" name="password" id="password">
+					<div id="passwordVisibility" class="passwordVisibility"></div>
+				</div>
+				<ul id="passwordConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<div class="row">
+				<label for="passwordConfirm">
+					{{en}}Confirm Password *{{/en}}
+					{{fr}}Confirmer le Mot de Passe *{{/fr}}
+				</label>
+				<input type="password" data-type="password" name="passwordConfirm" id="passwordConfirm">
+				<ul id="passwordConfirmConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<div class="row">
+				<label for="oldPassword">
+					{{en}}Old Password *{{/en}}
+					{{fr}}Ancien Mot de Passe *{{/fr}}
+				</label>
+				<div class="passwordContainer">
+					<input type="password" data-type="password" name="oldPassword" id="oldPassword">
+					<div id="oldPasswordVisibility" class="passwordVisibility"></div>
+				</div>
+				<ul id="oldPasswordConditionMessage" class="messageBox disable"></ul>
+			</div>
+			<input id="changePasswordBtn" class="btn" type="submit" value="{{en}}VALIDATE{{/en}}{{fr}}VALIDER{{/fr}}">
+			<div id="messageForm" class="messageBox disable"></div>
+		</form>
+		<form id="deleteAccountForm" class="container" method="post">
+			<h3 class="category">{{en}}Delete Account{{/en}}{{fr}}Supprimer le Compte{{/fr}}</h3>
+			<div class="row">
+				<label for="passwordToDeleteAccount">
+					{{en}}Password *{{/en}}
+					{{fr}}Mot de Passe *{{/fr}}
+				</label>
+				<div class="passwordContainer">
+					<input type="password" data-type="password" name="passwordToDeleteAccount" id="passwordToDeleteAccount">
+					<div id="passwordToDeleteAccountVisibility" class="passwordVisibility"></div>
+				</div>
+				<ul id="passwordToDeleteAccountMessage" class="messageBox disable"></ul>
+			</div>
+			<input id="deleteAccountBtn" class="btn" type="submit" value="{{en}}VALIDATE{{/en}}{{fr}}VALIDER{{/fr}}">
+			<div id="messageForm" class="messageBox disable"></div>
+		</form>
+	</div>
+</div>

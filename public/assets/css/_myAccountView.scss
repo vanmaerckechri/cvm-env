@@ -1,0 +1,40 @@
+.myAccountView
+{
+	.container
+	{
+		margin-bottom: $distance-generic02;
+		border: 1px solid white;
+		border-radius: 8px;
+		padding: $distance-generic01 * 2;
+		background-color: $bgColor-translucentBox;
+		.category
+		{
+			display: flex;
+			align-items: center;
+			color: $bgColor-header;
+			white-space: nowrap;
+			font-size: 100%;
+			&::after
+			{
+				content: '';
+				border-radius: 50%;
+				width: 8px;
+				height: 8px;
+				order: -1;
+				background-color: $bgColor-header;
+			}
+			&::before
+			{
+				margin-right: $distance-generic01;
+				content: '';
+				height: 2px;
+				flex: 1;
+				background-color: $bgColor-header;
+			}
+		}
+		.btn
+		{
+			border: 1px solid $color-btn;
+		}
+	}
+}
