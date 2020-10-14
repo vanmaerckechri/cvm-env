@@ -16,6 +16,11 @@ class BuildHtaccess
 			RewriteRule ^(.*)$ " . $subBaseUri . "public/index.html?url=$1 [QSA,L]
 		"));
 
+		if ($subBaseUri != "/buildManager/build/")
+		{
+			$content = str_replace("#", "", $content);
+		}
+
 		Tools::writeFile('build\.htaccess', $content);
 	}
 }
